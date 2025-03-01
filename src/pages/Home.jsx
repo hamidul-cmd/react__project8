@@ -17,6 +17,27 @@ import robot3 from "../assets/robot3.png";
 import dogavator from "../assets/dogavator.png";
 import floweravator from "../assets/floweravator.png";
 import robotavator from "../assets/robotavator.png";
+import user1 from "../assets/user1.png";
+import user2 from "../assets/user2.png";
+import user3 from "../assets/user3.png";
+import Profile from "../components/Profile";
+import cate1 from "../assets/cate1.png";
+import cate2 from "../assets/cate2.png";
+import cate3 from "../assets/cate3.png";
+import cate4 from "../assets/cate4.png";
+import cate5 from "../assets/cate5.png";
+import cate6 from "../assets/cate6.png";
+import cate7 from "../assets/cate7.png";
+import cate8 from "../assets/cate8.png";
+import catesvg1 from "../assets/cate1.svg";
+import catesvg2 from "../assets/cate2.svg";
+import catesvg3 from "../assets/cate3.svg";
+import catesvg4 from "../assets/cate4.svg";
+import catesvg5 from "../assets/cate5.svg";
+import catesvg6 from "../assets/cate6.svg";
+import catesvg7 from "../assets/cate7.svg";
+import catesvg8 from "../assets/cate8.svg";
+import CategoriesCird from "../components/CategoriesCird";
 
 function Home() {
   const dog = {
@@ -46,6 +67,111 @@ function Home() {
     tittle: "Magic Mushrooms",
     name: "Shroomie",
   };
+  const profile = [
+    {
+      img: user1,
+      name: "Keepitreal",
+      sales: "34.53",
+    },
+    {
+      img: user2,
+      name: "DigiLab",
+      sales: "34.53",
+    },
+    {
+      img: user3,
+      name: "GravityOne",
+      sales: "34.53",
+    },
+    {
+      img: user1,
+      name: "Juanie",
+      sales: "34.53",
+    },
+    {
+      img: user2,
+      name: "BlueWhale",
+      sales: "34.53",
+    },
+    {
+      img: user3,
+      name: "mr fox",
+      sales: "34.53",
+    },
+    {
+      img: user1,
+      name: "Shroomie",
+      sales: "34.53",
+    },
+    {
+      img: user2,
+      name: "robotica",
+      sales: "34.53",
+    },
+    {
+      img: user3,
+      name: "RustyRobot",
+      sales: "34.53",
+    },
+    {
+      img: user1,
+      name: "animakid",
+      sales: "34.53",
+    },
+    {
+      img: user2,
+      name: "Dotgu",
+      sales: "34.53",
+    },
+    {
+      img: user3,
+      name: "Ghiblier",
+      sales: "34.53",
+    },
+  ];
+  const categories = [
+    {
+      img: cate1,
+      svg: catesvg1,
+      tittle: "Art",
+    },
+    {
+      img: cate2,
+      svg: catesvg2,
+      tittle: "Collectibles",
+    },
+    {
+      img: cate3,
+      svg: catesvg3,
+      tittle: "Music",
+    },
+    {
+      img: cate4,
+      svg: catesvg4,
+      tittle: "Photography",
+    },
+    {
+      img: cate5,
+      svg: catesvg5,
+      tittle: "Video",
+    },
+    {
+      img: cate6,
+      svg: catesvg6,
+      tittle: "Utility",
+    },
+    {
+      img: cate7,
+      svg: catesvg7,
+      tittle: "Sport",
+    },
+    {
+      img: cate8,
+      svg: catesvg8,
+      tittle: "Virtual",
+    },
+  ];
+
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from(".hero__text h1, .hero__text p,.primare_btn__box, .hero__flex", {
@@ -221,6 +347,38 @@ function Home() {
             button="View Rankings"
             link="/ranking"
           />
+        </div>
+        <div className="grid grid-cols-1 gap-5 md2:grid-cols-2 md2:gap-7.5 lg2:grid-cols-4">
+          {profile.map((data, index) => {
+            return (
+              <Profile
+                key={index}
+                name={data.name}
+                img={data.img}
+                sales={data.sales}
+                number={index}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section className="px-7.5 py-10 md2:px-16.6 lg2:px-24.6 lg2:py-20">
+        <div className="mb-10 lg2:mb-14.5">
+          <h2 className="text-28 leading-140 font-semibold text-white lg2:text-38 lg2:leading-120">
+            Browse Categories
+          </h2>
+        </div>
+        <div className="grid grid-cols-2 gap-5 md2:gap-7.5 md2:grid-cols-4">
+          {categories.map((data, index) => {
+            return (
+              <CategoriesCird
+                key={index}
+                img={data.img}
+                svg={data.svg}
+                tittle={data.tittle}
+              />
+            );
+          })}
         </div>
       </section>
     </>
