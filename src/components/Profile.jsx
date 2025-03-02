@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router";
 
 function Profile({ name, img, sales, number }) {
   return (
     <>
-      <div className="relative bg-bag__sec p-5 rounded-20 flex gap-5 items-center lg2:flex-col hover:scale-95 transition-all duration-300 ease-in-out cursor-pointer">
+      <Link className="relative bg-bag__sec p-5 rounded-20 flex gap-5 items-center lg2:flex-col hover:scale-95 transition-all duration-300 ease-in-out cursor-pointer">
         <div className="img">
           <img
             src={img}
@@ -28,7 +29,7 @@ function Profile({ name, img, sales, number }) {
             {number + 1}
           </span>
         </div>
-      </div>
+      </Link>
     </>
   );
 }

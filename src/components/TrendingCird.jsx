@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router";
 
 function TrendingCird({ data }) {
   return (
     <>
-      <div className="trending__cird">
+      <Link className="trending__cird">
         <div className="mb-3.6">
           <img
             src={data.img1}
             alt="cird img"
-            className="block h-[330px] w-[330px] hover:scale-95 transition-all duration-300 ease-in-out"
+            className="block h-[330px] w-full hover:scale-95 transition-all duration-300 ease-in-out"
           />
         </div>
         <div className="flex justify-between mb-3.6 h-fit">
@@ -41,7 +42,7 @@ function TrendingCird({ data }) {
           </div>
           <h5 className="text-base leading-140 text-white">{data.name}</h5>
         </div>
-      </div>
+      </Link>
     </>
   );
 }

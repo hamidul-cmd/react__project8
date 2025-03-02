@@ -8,6 +8,12 @@ import { Link, NavLink } from "react-router";
 
 function Header() {
   const [show, setshow] = useState(false);
+  const gotop = () => {
+    window.scrollTo({ top: 0, left: 0 });
+  };
+  const relode = () => {
+    window.location.reload();
+  };
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.from(".logo,ul li, .nav__btn__box", {
@@ -20,8 +26,8 @@ function Header() {
   });
   return (
     <>
-      <header className="flex justify-between items-center relative py-3.6 px-7.5 md2:px-12.5 lg2:py-5 font-work__sans">
-        <Link to="/" className="logo">
+      <header className="flex justify-between items-center relative py-3.6 px-7.5 md2:px-12.5 lg2:py-5 font-work__sans z-[500]">
+        <Link to="/" className="logo" onClick={gotop}>
           <img src={logosmall} alt="" className="block md2:hidden" />
           <img
             src={logomidium}
@@ -36,7 +42,7 @@ function Header() {
           }`}
         >
           <ul className="flex flex-col w-full items-center lg2:flex-row lg2:w-fit lg2:mr-2.5 lg2:gap-2.5">
-            <li>
+            <li onClick={gotop}>
               <NavLink
                 onClick={() => setshow(!show)}
                 to="/marketplace"
@@ -45,7 +51,7 @@ function Header() {
                 <span className="relative">Marketplace</span>
               </NavLink>
             </li>
-            <li>
+            <li onClick={gotop}>
               <NavLink
                 onClick={() => setshow(!show)}
                 to="/ranking"
@@ -54,7 +60,7 @@ function Header() {
                 <span className="relative">Rankings</span>
               </NavLink>
             </li>
-            <li>
+            <li onClick={gotop}>
               <NavLink
                 onClick={() => setshow(!show)}
                 to="/cannect"
