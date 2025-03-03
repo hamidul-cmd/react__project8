@@ -5,11 +5,19 @@ function CommonHero() {
     <>
       <section className="hero px-7.5 py-10 md2:px-20 md2:py-14.5 lg2:px-24.6 lg2:py-20 max-w-wrapper m-auto">
         <div className="mb-7.5">
-          <h1 className="text-28 leading-140 text-white font-semibold mb-2.5 md2:text-38 md2:leading-120 lg2:text-51 lg2:leading-110">Browse Marketplace</h1>
-          <p className="text-base leading-140 text-white lg2:text-22 lg2:leading-160">Browse through more than 50k NFTs on the NFT Marketplace.</p>
+          <h1 className="text-28 leading-140 text-white font-semibold mb-2.5 md2:text-38 md2:leading-120 lg2:text-51 lg2:leading-110">
+            Browse Marketplace
+          </h1>
+          <p className="text-base leading-140 text-white lg2:text-22 lg2:leading-160">
+            Browse through more than 50k NFTs on the NFT Marketplace.
+          </p>
         </div>
         <div className="py-4.8 px-5 rounded-20 border border-bag__sec flex justify-between items-center">
-          <input type="text" placeholder="Search your favourite NFTs" className="w-full border-none outline-none placeholder:text-base placeholder:leading-140 placeholder:text-caption text-base leading-140 text-caption" />
+          <input
+            type="text"
+            placeholder="Search your favourite NFTs"
+            className="w-full border-none outline-none placeholder:text-base placeholder:leading-140 placeholder:text-caption text-base leading-140 text-caption"
+          />
           <button className="cursor-pointer">
             <svg
               width="24"

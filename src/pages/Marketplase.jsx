@@ -288,12 +288,14 @@ function Marketplase() {
         </div>
         <section className="bg-bag__sec border-b-4 border-b-bag">
           <div className="grid grid-cols-1 md2:grid-cols-2 lg2:grid-cols-3 gap-7.5 px-7.5 py-10 md2:px-20 md2:py-14.5 lg2:px-24.6 max-w-wrapper m-auto">
-            {grid === "nfts" && nft.map((data, i) => {
-              return <NftCird key={i} data={data} bg="#2b2b2b" />;
-            })}
-            {grid === "collections" && collections.map((data, i) => {
-              return <NftCird key={i} data={data} bg="#2b2b2b" />;
-            })}
+            {grid === "nfts" &&
+              nft.map((data, i) => {
+                return <NftCird key={i} data={data} bg="#2b2b2b" />;
+              })}
+            {grid === "collections" &&
+              collections.map((data, i) => {
+                return <NftCird key={i} data={data} bg="#2b2b2b" />;
+              })}
           </div>
         </section>
       </section>
