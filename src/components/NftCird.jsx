@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-function NftCird({ data }) {
+function NftCird({ data, bg }) {
   return (
     <>
       <Link className="rounded-20 overflow-hidden hover:scale-95 transition-all duration-300 ease-in-out">
@@ -12,7 +12,7 @@ function NftCird({ data }) {
             className="block w-full h-[238px] md2:h-[295px]"
           />
         </div>
-        <div className="p-5 pb-6.5 bg-bag__sec">
+        <div className="p-5 pb-6.5" style={{ backgroundColor: bg }}>
           <div className="mb-6.5">
             <h4 className="text-22 leading-140 font-semibold text-white mb-1.4">
               {data.tittle}

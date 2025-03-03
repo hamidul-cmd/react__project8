@@ -30,7 +30,8 @@ h1,
 h2,
 h4,
 h5,
-h6 {
+h6,
+p {
   font-family: "Work Sans", serif;
 }
 h3 {
@@ -58,6 +59,7 @@ h3 {
 
 @theme {
   --color-bag: #2b2b2b;
+  --color-fotter__text: #cccccc;
   --color-bag__sec: #3b3b3b;
   --color-caption: #858584;
   --color-action: #a259ff;

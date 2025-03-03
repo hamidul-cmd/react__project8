@@ -50,6 +50,7 @@ import work1 from "../assets/work1.png";
 import work2 from "../assets/work2.png";
 import work3 from "../assets/work3.png";
 import WorkCird from "../components/WorkCird";
+import joining from "../assets/joinimg.png";
 
 function Home() {
   const dog = {
@@ -446,7 +447,7 @@ function Home() {
         </div>
         <div className="grid grid-cols-1 gap-5 md2:grid-cols-2 md2:gap-7.5 lg2:grid-cols-3">
           {nft.map((data, i) => {
-            return <NftCird key={i} data={data} />;
+            return <NftCird key={i} data={data} bg="#3b3b3b" />;
           })}
         </div>
       </section>
@@ -552,6 +553,56 @@ function Home() {
           {work.map((data, i) => {
             return <WorkCird key={i} data={data} />;
           })}
+        </div>
+      </section>
+      <section className="px-7.5 py-10 max-w-wrapper m-auto md2:px-16.6 md2:pb-20 lg2:px-24.6">
+        <div className="w-full md2:flex md2:gap-7.5 md2:px-7.5 md2:py-10 md2:bg-bag__sec md2:rounded-20 lg2:gap-0 lg2:justify-between lg2:items-center lg2:p-14.5">
+          <div className="mb-7.5 md2:mb-0">
+            <img
+              src={joining}
+              alt=""
+              className="w-full h-[255px] rounded-20 md2:h-[280px] md2:w-[300px] block lg2:h-[310px] lg2:w-[425px]"
+            />
+          </div>
+          <div className="md2:w-[300px] lg2:w-[425px]">
+            <div className="mb-10">
+              <h2 className="text-28 font-semibold leading-140 text-white mb-2.5 lg2:text-38 lg2:leading-120">
+                Join our weekly
+                <br /> digest
+              </h2>
+              <p className="text-base leading-140 text-white font-work__sans lg2:text-22 lg2:leading-160">
+                Get exclusive promotions & updates straight to your inbox.
+              </p>
+            </div>
+            <div className="lg2:flex lg2:bg-white lg2:items-center lg2:rounded-full">
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                className="block w-full px-5 py-3 bg-white rounded-full border-none outline-none placeholder:text-base placeholder:leading-140 placeholder:text-bag text-base leading-140 text-bag mb-4 lg2:mb-0"
+              />
+              <button className="w-full flex justify-center items-center bg-action py-[13px] rounded-full text-white text-base leading-140 font-semibold font-work__sans gap-3 cursor-pointer lg2:py-5 lg2:px-12.5 hover:scale-95 transition-all duration-300 ease-in-out">
+                <div>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.875 4.375C1.875 4.02982 2.15482 3.75 2.5 3.75H17.5C17.8452 3.75 18.125 4.02982 18.125 4.375V15C18.125 15.3315 17.9933 15.6495 17.7589 15.8839C17.5245 16.1183 17.2065 16.25 16.875 16.25H3.125C2.79348 16.25 2.47554 16.1183 2.24112 15.8839C2.0067 15.6495 1.875 15.3315 1.875 15V4.375ZM3.125 5V15H16.875V5H3.125Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M2.03928 3.95268C2.27253 3.69823 2.66788 3.68104 2.92233 3.91428L10 10.4021L17.0777 3.91428C17.3321 3.68104 17.7275 3.69823 17.9607 3.95268C18.194 4.20713 18.1768 4.60248 17.9223 4.83573L10.4223 11.7107C10.1834 11.9298 9.81663 11.9298 9.57768 11.7107L2.07768 4.83573C1.82323 4.60248 1.80604 4.20713 2.03928 3.95268Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <span>Subscribe</span>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </>
