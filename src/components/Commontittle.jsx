@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router";
 
 function Commontittle({ tittle, pera, button, link }) {
+  const gotop = () => {
+    window.scrollTo({ top: 0, left: 0 });
+  };
   return (
     <>
       <div className="md2:w-[343px] lg2:w-[703px]">
@@ -14,6 +17,7 @@ function Commontittle({ tittle, pera, button, link }) {
       </div>
       {button && (
         <Link
+          onClick={gotop}
           to={link}
           className="secendary__btn hidden md2:flex gap-3 items-center hover:scale-95 transition-all duration-300 ease-in-out"
         >

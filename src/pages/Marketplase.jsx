@@ -238,7 +238,11 @@ function Marketplase() {
   ];
   return (
     <>
-      <CommonHero />
+      <CommonHero
+        tittle="Browse Marketplace"
+        pera="Browse through more than 50k NFTs on the NFT Marketplace."
+        search="Search your favourite NFTs"
+      />
       <section className="border-t border-bag__sec">
         <div className="px-7.5 pt-2.5 flex md2:px-20 lg2:px-24.6 max-w-wrapper m-auto">
           <NavLink
